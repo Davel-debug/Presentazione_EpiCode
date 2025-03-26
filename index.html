@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Pagina di presentazione</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ciao sono Dario</h1>
+    <img src="" alt="Una mia foto venuta bene" width="200" height="200">
+    
+  </header>
+  <main>
+    <section>
+      <h3>Hobbies e interessi</h3>
+      <ul>
+        <li>Sport</li>
+        <li>Stampa3D</li>
+        <li>Cucina</li>
+        <li>Auto</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h3>Esperienze scolastiche/accademiche e lavorative</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Anno</th>
+            <th>Tipo di esperienza</th>
+            <th>Descrizione</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2020-now</td>
+            <td>Università</td>
+            <td>Laurea in Ingegneria Informatica</td>
+          </tr>
+          <tr>
+            <td>2020-now</td>
+            <td>Lavoro</td>
+            <td>Tante cose nel campo IT support, help desk, tecnico elettronico ecc</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <footer>
+      <h5>Contatti
+      <ul>
+        <li>Email: <a href="darioblzn@gmail.com">darioblzn@gmail.com</a></li>
+        
+        <li>GitHub: <a href="https://github.com/Davel-debug">https://github.com/Davel-debug</a></li>
+      </ul>
+    </h5>
+    </footer>
+    </section>
+  </main>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
